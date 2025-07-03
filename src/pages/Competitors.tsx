@@ -1,16 +1,10 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CompetitorOverview } from "@/components/competitors/CompetitorOverview";
-import { CompetitorComparison } from "@/components/competitors/CompetitorComparison";
-import { ChangeTracking } from "@/components/competitors/ChangeTracking";
-import { CompetitorInsights } from "@/components/competitors/CompetitorInsights";
-import { AddCompetitorDialog } from "@/components/competitors/AddCompetitorDialog";
-import { Plus } from "lucide-react";
+import { Plus, Search } from "lucide-react";
 
 export const Competitors = () => {
-  const [showAddDialog, setShowAddDialog] = useState(false);
+  const [activeTab, setActiveTab] = useState("analyze");
 
   return (
     <div className="p-4 md:p-6 space-y-4 md:space-y-6">
@@ -19,42 +13,38 @@ export const Competitors = () => {
         <div>
           <h1 className="text-2xl md:text-3xl font-bold text-foreground">Competitor Analysis</h1>
           <p className="text-muted-foreground text-sm md:text-base">
-            Track, compare, and monitor your competitors in real-time
+            Track and analyze your competitors
           </p>
         </div>
-        <Button onClick={() => setShowAddDialog(true)} className="w-full sm:w-auto">
-          <Plus className="mr-2 h-4 w-4" />
-          Add Competitor
+        <Button onClick={() => setActiveTab("analyze")} className="w-full sm:w-auto">
+          <Search className="mr-2 h-4 w-4" />
+          Analyze Competitor
         </Button>
       </div>
 
       {/* Main Content */}
-      <Tabs defaultValue="overview" className="space-y-4 md:space-y-6">
-        <TabsList className="grid w-full grid-cols-2 md:grid-cols-4">
-          <TabsTrigger value="overview">Overview</TabsTrigger>
-          <TabsTrigger value="comparison">Compare</TabsTrigger>
-          <TabsTrigger value="tracking">Change Tracking</TabsTrigger>
-          <TabsTrigger value="insights">Insights</TabsTrigger>
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4 md:space-y-6">
+        <TabsList className="grid w-full grid-cols-2">
+          <TabsTrigger value="analyze">Analyze</TabsTrigger>
+          <TabsTrigger value="track">Track Changes</TabsTrigger>
         </TabsList>
 
-        <TabsContent value="overview" className="space-y-6">
-          <CompetitorOverview />
+        <TabsContent value="analyze" className="space-y-6">
+          <div className="text-center py-12">
+            <Search className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
+            <h3 className="text-lg font-semibold mb-2">Analyze Competitors</h3>
+            <p className="text-muted-foreground">Start analyzing your competitors here</p>
+          </div>
         </TabsContent>
 
-        <TabsContent value="comparison" className="space-y-6">
-          <CompetitorComparison />
-        </TabsContent>
-
-        <TabsContent value="tracking" className="space-y-6">
-          <ChangeTracking />
-        </TabsContent>
-
-        <TabsContent value="insights" className="space-y-6">
-          <CompetitorInsights />
+        <TabsContent value="track" className="space-y-6">
+          <div className="text-center py-12">
+            <Plus className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
+            <h3 className="text-lg font-semibold mb-2">Track Changes</h3>
+            <p className="text-muted-foreground">Monitor competitor changes and updates</p>
+          </div>
         </TabsContent>
       </Tabs>
-
-      <AddCompetitorDialog open={showAddDialog} onOpenChange={setShowAddDialog} />
     </div>
   );
 };
