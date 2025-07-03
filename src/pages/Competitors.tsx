@@ -17,8 +17,8 @@ export const Competitors = () => {
           </p>
         </div>
         <Button onClick={() => setActiveTab("analyze")} className="w-full sm:w-auto">
-          <Search className="mr-2 h-4 w-4" />
-          Analyze Competitor
+          <Plus className="mr-2 h-4 w-4" />
+          Add Competitor
         </Button>
       </div>
 
