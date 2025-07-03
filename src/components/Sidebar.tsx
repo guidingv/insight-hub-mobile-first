@@ -1,4 +1,4 @@
-import { BarChart3, Users, Target, TrendingUp, Settings, Zap, PenTool, Search } from "lucide-react";
+import { BarChart3, Users, Target, TrendingUp, Settings, PenTool, Search, Lightbulb, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface SidebarProps {
@@ -12,8 +12,8 @@ const menuItems = [
   { id: "content", label: "Content Studio", icon: PenTool },
   { id: "leads", label: "Lead Tracker", icon: Users },
   { id: "campaigns", label: "Campaigns", icon: Target },
-  { id: "analytics", label: "Analytics", icon: TrendingUp },
-  { id: "automation", label: "Automation", icon: Zap },
+  { id: "ai-seo", label: "AI SEO", icon: TrendingUp },
+  { id: "idea-hub", label: "Idea Hub", icon: Lightbulb },
   { id: "settings", label: "Settings", icon: Settings },
 ];
 

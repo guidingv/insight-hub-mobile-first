@@ -4,6 +4,7 @@ import { DashboardHeader } from "@/components/DashboardHeader";
 import { Dashboard } from "@/components/dashboard/Dashboard";
 import { Competitors } from "@/pages/Competitors";
 import { ContentStudio } from "@/pages/ContentStudio";
+import { LeadTracker } from "@/pages/LeadTracker";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("dashboard");
@@ -17,12 +18,7 @@ const Index = () => {
       case "content":
         return <ContentStudio />;
       case "leads":
-        return (
-          <div className="p-6">
-            <h1 className="text-2xl font-bold mb-4">Lead Tracker</h1>
-            <p className="text-muted-foreground">Monitor and manage your leads...</p>
-          </div>
-        );
+        return <LeadTracker />;
       case "campaigns":
         return (
           <div className="p-6">
@@ -30,18 +26,18 @@ const Index = () => {
             <p className="text-muted-foreground">Manage your marketing campaigns...</p>
           </div>
         );
-      case "analytics":
+      case "ai-seo":
         return (
           <div className="p-6">
-            <h1 className="text-2xl font-bold mb-4">Analytics</h1>
-            <p className="text-muted-foreground">View detailed performance analytics...</p>
+            <h1 className="text-2xl font-bold mb-4">AI SEO</h1>
+            <p className="text-muted-foreground">Optimize your content for search engines with AI...</p>
           </div>
         );
-      case "automation":
+      case "idea-hub":
         return (
           <div className="p-6">
-            <h1 className="text-2xl font-bold mb-4">Automation</h1>
-            <p className="text-muted-foreground">Set up marketing automation workflows...</p>
+            <h1 className="text-2xl font-bold mb-4">Idea Hub</h1>
+            <p className="text-muted-foreground">Generate and organize content ideas with AI...</p>
           </div>
         );
       case "settings":
