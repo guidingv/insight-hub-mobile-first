@@ -61,16 +61,16 @@ export const Dashboard = () => {
   return (
     <div className="p-6 space-y-8">
       {/* Welcome Section */}
-      <div className="bg-gradient-hero rounded-xl p-8 text-white">
-        <h1 className="text-3xl font-bold mb-2">Good morning, Sarah! 👋</h1>
-        <p className="text-white/90 mb-6">
+      <div className="bg-card border border-border rounded-xl p-8">
+        <h1 className="text-3xl font-bold mb-2 text-foreground">Good morning, Sarah! 👋</h1>
+        <p className="text-muted-foreground mb-6">
           Your marketing hub is performing well. Here's what's happening today.
         </p>
         <div className="flex gap-4">
-          <Button variant="secondary" className="bg-white text-primary hover:bg-white/90">
+          <Button variant="default">
             Create Campaign
           </Button>
-          <Button variant="outline" className="border-white text-white hover:bg-white/10">
+          <Button variant="outline">
             View Analytics
           </Button>
         </div>
