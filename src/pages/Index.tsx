@@ -9,6 +9,7 @@ import { LeadTracker } from "@/pages/LeadTracker";
 import { ICPGenerator } from "@/pages/ICPGenerator";
 import { Trends } from "@/pages/Trends";
 import { AISEOAnalyzer } from "@/pages/AISEOAnalyzer";
+import { Strategy } from "@/pages/Strategy";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("dashboard");
@@ -29,13 +30,8 @@ const Index = () => {
         return <ICPGenerator />;
       case "trends":
         return <Trends />;
-      case "campaigns":
-        return (
-          <div className="p-6">
-            <h1 className="text-2xl font-bold mb-4">Campaigns</h1>
-            <p className="text-muted-foreground">Manage your marketing campaigns...</p>
-          </div>
-        );
+      case "strategy":
+        return <Strategy />;
       case "ai-seo":
         return <AISEOAnalyzer />;
       case "idea-hub":

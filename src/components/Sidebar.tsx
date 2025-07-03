@@ -8,13 +8,13 @@ interface SidebarProps {
 
 const menuItems = [
   { id: "dashboard", label: "Dashboard", icon: BarChart3 },
+  { id: "strategy", label: "Strategy", icon: Target },
   { id: "competitors", label: "Competitors", icon: Search },
   { id: "content", label: "Content", icon: PenTool },
   { id: "graphics", label: "Graphics", icon: Image },
   { id: "leads", label: "Lead Tracker", icon: Users },
   { id: "icp", label: "ICP Generator", icon: Target },
   { id: "trends", label: "Trends", icon: TrendingUp },
-  { id: "campaigns", label: "Campaigns", icon: Target },
   { id: "ai-seo", label: "AI SEO", icon: TrendingUp },
   { id: "idea-hub", label: "Idea Hub", icon: Lightbulb },
   { id: "settings", label: "Settings", icon: Settings },
