@@ -4,6 +4,7 @@ import { DashboardHeader } from "@/components/DashboardHeader";
 import { Dashboard } from "@/components/dashboard/Dashboard";
 import { Competitors } from "@/pages/Competitors";
 import { ContentStudio } from "@/pages/ContentStudio";
+import { Graphics } from "@/pages/Graphics";
 import { LeadTracker } from "@/pages/LeadTracker";
 
 const Index = () => {
@@ -17,6 +18,8 @@ const Index = () => {
         return <Competitors />;
       case "content":
         return <ContentStudio />;
+      case "graphics":
+        return <Graphics />;
       case "leads":
         return <LeadTracker />;
       case "campaigns":
