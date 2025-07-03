@@ -3,6 +3,7 @@ import { Sidebar } from "@/components/Sidebar";
 import { DashboardHeader } from "@/components/DashboardHeader";
 import { Dashboard } from "@/components/dashboard/Dashboard";
 import { Competitors } from "@/pages/Competitors";
+import { ContentStudio } from "@/pages/ContentStudio";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("dashboard");
@@ -14,12 +15,7 @@ const Index = () => {
       case "competitors":
         return <Competitors />;
       case "content":
-        return (
-          <div className="p-6">
-            <h1 className="text-2xl font-bold mb-4">Content Studio</h1>
-            <p className="text-muted-foreground">Create and manage your marketing content...</p>
-          </div>
-        );
+        return <ContentStudio />;
       case "leads":
         return (
           <div className="p-6">
