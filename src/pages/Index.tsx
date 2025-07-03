@@ -6,6 +6,8 @@ import { Competitors } from "@/pages/Competitors";
 import { ContentStudio } from "@/pages/ContentStudio";
 import { Graphics } from "@/pages/Graphics";
 import { LeadTracker } from "@/pages/LeadTracker";
+import { ICPGenerator } from "@/pages/ICPGenerator";
+import { Trends } from "@/pages/Trends";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("dashboard");
@@ -22,6 +24,10 @@ const Index = () => {
         return <Graphics />;
       case "leads":
         return <LeadTracker />;
+      case "icp":
+        return <ICPGenerator />;
+      case "trends":
+        return <Trends />;
       case "campaigns":
         return (
           <div className="p-6">
