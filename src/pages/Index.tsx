@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Sidebar } from "@/components/Sidebar";
 import { DashboardHeader } from "@/components/DashboardHeader";
 import { Dashboard } from "@/components/dashboard/Dashboard";
+import { Competitors } from "@/pages/Competitors";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("dashboard");
@@ -11,12 +12,7 @@ const Index = () => {
       case "dashboard":
         return <Dashboard />;
       case "competitors":
-        return (
-          <div className="p-6">
-            <h1 className="text-2xl font-bold mb-4">Competitor Analysis</h1>
-            <p className="text-muted-foreground">Track and analyze your competitors' strategies...</p>
-          </div>
-        );
+        return <Competitors />;
       case "content":
         return (
           <div className="p-6">
