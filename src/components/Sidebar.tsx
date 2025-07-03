@@ -19,7 +19,7 @@ const menuItems = [
 
 export const Sidebar = ({ activeTab, onTabChange }: SidebarProps) => {
   return (
-    <div className="w-64 bg-card border-r border-border h-screen flex flex-col shadow-card">
+    <div className="w-64 bg-card border-r border-border h-screen flex flex-col shadow-card hidden lg:flex">
       <div className="p-6 border-b border-border">
         <h1 className="text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent">
           MarketingHub

@@ -11,21 +11,21 @@ export const ContentStudio = () => {
   const [activeTab, setActiveTab] = useState("dashboard");
 
   return (
-    <div className="p-6 space-y-6">
+    <div className="p-4 md:p-6 space-y-4 md:space-y-6">
       {/* Header */}
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-foreground">Content Studio</h1>
-          <p className="text-muted-foreground">
+          <h1 className="text-2xl md:text-3xl font-bold text-foreground">Content Studio</h1>
+          <p className="text-muted-foreground text-sm md:text-base">
             Create, plan, and manage your marketing content
           </p>
         </div>
-        <div className="flex gap-2">
-          <Button variant="outline" onClick={() => setActiveTab("create")}>
+        <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
+          <Button variant="outline" onClick={() => setActiveTab("create")} className="w-full sm:w-auto">
             <Sparkles className="mr-2 h-4 w-4" />
             AI Generate
           </Button>
-          <Button onClick={() => setActiveTab("create")}>
+          <Button onClick={() => setActiveTab("create")} className="w-full sm:w-auto">
             <Plus className="mr-2 h-4 w-4" />
             Create Content
           </Button>
@@ -33,8 +33,8 @@ export const ContentStudio = () => {
       </div>
 
       {/* Main Content */}
-      <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-        <TabsList className="grid w-full grid-cols-4">
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4 md:space-y-6">
+        <TabsList className="grid w-full grid-cols-2 md:grid-cols-4">
           <TabsTrigger value="dashboard">Dashboard</TabsTrigger>
           <TabsTrigger value="create">Create</TabsTrigger>
           <TabsTrigger value="calendar">Calendar</TabsTrigger>
