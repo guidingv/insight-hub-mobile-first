@@ -8,6 +8,7 @@ import { Graphics } from "@/pages/Graphics";
 import { LeadTracker } from "@/pages/LeadTracker";
 import { ICPGenerator } from "@/pages/ICPGenerator";
 import { Trends } from "@/pages/Trends";
+import { AISEOAnalyzer } from "@/pages/AISEOAnalyzer";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("dashboard");
@@ -36,12 +37,7 @@ const Index = () => {
           </div>
         );
       case "ai-seo":
-        return (
-          <div className="p-6">
-            <h1 className="text-2xl font-bold mb-4">AI SEO</h1>
-            <p className="text-muted-foreground">Optimize your content for search engines with AI...</p>
-          </div>
-        );
+        return <AISEOAnalyzer />;
       case "idea-hub":
         return (
           <div className="p-6">
