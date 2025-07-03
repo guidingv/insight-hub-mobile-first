@@ -51,18 +51,6 @@ export const Sidebar = ({ activeTab, onTabChange }: SidebarProps) => {
           );
         })}
       </nav>
-      
-      <div className="p-4 border-t border-border">
-        <div className="bg-gradient-purple rounded-lg p-4">
-          <h3 className="font-semibold text-white mb-2">Upgrade to Pro</h3>
-          <p className="text-white/80 text-sm mb-3">
-            Unlock advanced features and unlimited campaigns
-          </p>
-          <button className="w-full bg-white text-marketing-purple py-2 px-4 rounded-md font-medium text-sm hover:bg-white/90 transition-colors">
-            Upgrade Now
-          </button>
-        </div>
-      </div>
     </div>
   );
 };
