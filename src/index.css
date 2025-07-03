@@ -8,36 +8,36 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 248 250 252;
-    --foreground: 226 232 240;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
 
-    --card: 255 255 255;
-    --card-foreground: 15 23 42;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
 
-    --popover: 255 255 255;
-    --popover-foreground: 15 23 42;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
 
-    --primary: 236 72% 79%;
-    --primary-foreground: 15 23 42;
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 98%;
     
-    --primary-dark: 236 72% 65%;
-    --primary-light: 236 72% 87%;
+    --primary-dark: 221 83% 45%;
+    --primary-light: 221 83% 85%;
 
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 15 23 42;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 100 116 139;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 220 14% 96%;
-    --accent-foreground: 15 23 42;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 9%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 255 255 255;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 226 232 240;
-    --input: 226 232 240;
-    --ring: 236 72% 79%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 221 83% 53%;
 
     --radius: 0.75rem;
     
@@ -52,17 +52,17 @@ All colors MUST be HSL.
     --marketing-purple-light: 258 90% 85%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--marketing-blue)));
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
-    --gradient-success: linear-gradient(135deg, hsl(var(--marketing-green)), hsl(var(--marketing-green-light)));
-    --gradient-warning: linear-gradient(135deg, hsl(var(--marketing-orange)), hsl(var(--marketing-orange-light)));
-    --gradient-info: linear-gradient(135deg, hsl(var(--marketing-blue)), hsl(var(--marketing-blue-light)));
-    --gradient-purple: linear-gradient(135deg, hsl(var(--marketing-purple)), hsl(var(--marketing-purple-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(221 83% 53%), hsl(217 91% 60%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(0 0% 96%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 75%));
+    --gradient-warning: linear-gradient(135deg, hsl(24 95% 53%), hsl(24 95% 85%));
+    --gradient-info: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 85%));
+    --gradient-purple: linear-gradient(135deg, hsl(258 90% 66%), hsl(258 90% 85%));
     
     /* Shadows */
-    --shadow-card: 0 4px 6px -1px hsl(var(--foreground) / 0.1);
-    --shadow-hover: 0 10px 15px -3px hsl(var(--foreground) / 0.1);
-    --shadow-glow: 0 0 20px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow-hover: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -2px hsl(0 0% 0% / 0.1);
+    --shadow-glow: 0 0 20px hsl(221 83% 53% / 0.3);
 
     --sidebar-background: 0 0% 98%;
 
