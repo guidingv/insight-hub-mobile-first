@@ -66,14 +66,6 @@ export const Dashboard = () => {
         <p className="text-muted-foreground mb-6">
           Your marketing hub is performing well. Here's what's happening today.
         </p>
-        <div className="flex gap-4">
-          <Button variant="default">
-            Create Campaign
-          </Button>
-          <Button variant="outline">
-            View Analytics
-          </Button>
-        </div>
       </div>
 
       {/* Metrics Grid */}
